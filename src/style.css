@@ -1,0 +1,116 @@
+:root {
+  font-family: Avenir, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #000;
+  background-color: #fffbfb;
+  font-size:  16px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  min-height: 100vh;
+}
+
+ul, ol,
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+list-style: none;  
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+section.wrapper {
+  margin-top: 1.5rem;
+  padding: 2rem;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  background-color: #ffefef;
+  width: 80vw;
+  max-width: 800px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons button {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #696666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttons button.active {
+  color: #000;
+}
+
+.buttons button::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  border-radius: .2rem;
+  transition: width 0.3s ease-in-out;
+}
+
+.buttons button.active::after {
+  width: 100%;
+}
+
+.buttons button:not(.active):hover::after {
+  width: 100%;
+}
+
+
+.tab-content {
+  margin-top: 1rem;
+}
+
+.tab-content .tab {
+  display: none;
+}
+
+.tab-content .tab h2 {
+  text-align: center;
+}
+
+.tab-content .tab p.first-paragraph {
+  margin-top: 1rem;
+}
+
+.tab-content .tab.active {
+  display: block;
+}
